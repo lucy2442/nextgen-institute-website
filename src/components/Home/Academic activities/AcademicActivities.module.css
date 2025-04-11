@@ -1,0 +1,129 @@
+.activityContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 70px;
+  background: linear-gradient(to bottom right, #e6f0ff, #f0f8ff);
+  padding: 40px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 72, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.activityContainer:hover {
+  transform: scale(1.01);
+}
+
+.activityImage img {
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 72, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activityImage img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 28px rgba(0, 72, 255, 0.3);
+}
+
+.activityDetails {
+  text-align: center;
+  margin-top: 30px;
+  max-width: 650px;
+  color: #003366;
+}
+
+.activityDetails h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #0048ff;
+}
+
+.description {
+  font-size: 18px;
+  color: #004080;
+  margin-bottom: 25px;
+}
+
+.activityDetails p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #002244;
+}
+
+.activityDetails .activeTask {
+  margin-top: 25px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(90deg, #005eff, #00b2ff);
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.activityDetails .activeTask:hover {
+  background: linear-gradient(90deg, #0048ff, #0096ff);
+  transform: scale(1.05);
+}
+
+.activityDetails .inactiveTask {
+  margin-top: 25px;
+  cursor: not-allowed;
+  color: #0096ff;
+  border: 1px solid #0096ff;
+  background-color: #f0f8ff;
+  font-size: 16px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  opacity: 0.6;
+}
+
+.taskMessageDiv {
+  background-color: #f0f8ff;
+  border-left: 5px solid #0048ff;
+  box-shadow: 0px 4px 12px rgba(136, 19, 194, 0.1);
+  padding: 15px 20px;
+  margin: 40px 0px 20px;
+  font-size: 15px;
+  color: #003366;
+  border-radius: 8px;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 600px) {
+  .activityContainer {
+    padding: 20px 10px;
+    margin: 30px 10px;
+  }
+
+  .activityImage img {
+    max-width: 100%;
+  }
+
+  .activityDetails {
+    padding: 0 10px;
+  }
+
+  .activityDetails h2 {
+    font-size: 24px;
+  }
+
+  .activityDetails p {
+    font-size: 14px;
+  }
+
+  .taskMessageDiv {
+    padding: 12px 10px;
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .activityDetails .activeTask,
+  .activityDetails .inactiveTask {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}

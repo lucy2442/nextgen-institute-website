@@ -1,0 +1,113 @@
+header {
+  background-color: #ADB2D4;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  position: fixed;       /* Make it sticky */
+  top: 0;                 /* Stick to top */
+  z-index: 1000;          /* Stay above other content */
+  width: 100%;            /* Ensure full width */
+  padding: 10px 0;        /* Optional: Adds vertical spacing */
+
+}
+
+/* If needed, you can add a subtle box shadow to highlight the sticky header */
+header.sticky-shadow {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.headercontent {
+  display: flex;
+  flex-direction: column;
+  margin-left: 240px;
+}
+
+.logo {
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.uniName {
+  font-size: 38px;
+  color: #2b2d42; /* Deep navy */
+  text-shadow: 2px 3px 6px rgba(0, 0, 0, 0.4);
+  letter-spacing: 0.8px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #051720;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+nav a.active {
+  border-bottom: 2px solid #02293b;
+  color: #062c3e;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.4);
+}
+.main-content {
+  padding-top: 130px; /* Adjust this based on your header height */
+}
+
+/* Print */
+@media print {
+  header {
+    display: none;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .headercontent {
+    margin-left: 0px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 12px;
+  }
+
+  nav li {
+    margin: 5px;
+  }
+
+  .logo img {
+    width: 90px;
+    height: 90px;
+    margin-right: 15px;
+  }
+
+  .uniName {
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: -8px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+}

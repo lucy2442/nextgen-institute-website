@@ -1,0 +1,92 @@
+.aboutContainer {
+  max-width: 900px;
+  margin: 30px auto 50px;
+  padding: 30px;
+  background-color: #f9f9ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.aboutContainer:hover {
+  transform: scale(1.01);
+}
+
+/* Animated underline using pseudo-element */
+.aboutContainer h2,
+.aboutContainer h3 {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.aboutContainer h2::after,
+.aboutContainer h3::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #00509e;
+  transition: width 0.3s ease;
+}
+
+.aboutContainer h2:hover::after,
+.aboutContainer h3:hover::after {
+  width: 100%;
+}
+
+/* Heading styles */
+.aboutContainer h2 {
+  font-size: 28px;
+  color: #001f3f;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.aboutContainer h3 {
+  font-size: 22px;
+  color: #002b5c;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+/* Paragraph hover effect */
+.aboutContainer p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.aboutContainer p:hover {
+  color: #1a1a1a;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  .aboutContainer {
+    padding: 15px;
+  }
+
+  .aboutContainer h2 {
+    font-size: 22px;
+    margin-bottom: 12px;
+  }
+
+  .aboutContainer h3 {
+    font-size: 18px;
+    margin-top: 20px;
+  }
+
+  .aboutContainer p {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0px 10px 15px;
+  }
+}
